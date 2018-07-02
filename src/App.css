@@ -1,0 +1,141 @@
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  background-color: #343a40;
+  color: white;
+  position: fixed;
+}
+
+nav {
+  width: 100%;
+  margin: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.good-burger {
+  border: .5px solid white;
+  border-radius: 5px;
+  width: 50px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredients {
+  width: 60%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ingredients>div {
+  background-color: white;
+  height: 4px;
+  width: 100%;
+}
+
+.nav-menu {
+  display: none;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.mobile-nav {
+  background-color: #343a40;
+  position: fixed;
+  top: 70px;
+  color: white;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition: .4s height ease-out;
+}
+
+.show-nav {
+  height: 190px;
+}
+
+.animation {
+  height: 80vh;
+  padding-top: 200px;
+}
+
+.animation-example {
+  width: 200px;
+  height: 200px;
+  background: blue;
+  animation-name: superSpin;
+  animation-duration: 5s;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  box-shadow: 50px 10px #888888;
+}
+
+.playing {
+  animation-play-state: running;
+}
+
+.perspective {
+  perspective: 500px;
+}
+
+button {
+  margin-top: 100px;
+}
+
+@keyframes superSpin {
+  0% {
+    transform: rotateX(0deg)
+  }
+  50% {
+    transform: rotateX(360deg);
+    background: blue;
+  }
+  100% {
+    transform: rotateX(10000deg);
+    background: red;
+  }
+}
+
+
+@media (min-width: 576px) {
+  nav {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .good-burger {
+    display: none;
+  }
+  .nav-menu {
+    display: flex;
+  }
+  nav {
+    width: 960px;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    width: 1140px;
+  }
+}
